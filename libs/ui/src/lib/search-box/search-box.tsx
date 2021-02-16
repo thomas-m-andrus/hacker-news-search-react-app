@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 export function SearchBox(props: SearchBoxProps) {
   return (
-    <div>
+    <div className={`search-box`}>
       <Autocomplete
         id="combo-box-demo"
         options={top100Films}
@@ -19,10 +19,14 @@ export function SearchBox(props: SearchBoxProps) {
           <TextField {...params} label="Combo box" variant="outlined" />
         )}
       />
-      <Button size="large">Search</Button>
-      <div>
-        <div>Search</div>
-        <Select>
+      <Button className={`search-box__button`} size="large">
+        Search
+      </Button>
+      <div className={`search-box__filter`}>
+        <div className={`search-box__filter-label`}>Search</div>
+        <Select
+          className={`search-box__filter-select search-box_filter-select--type`}
+        >
           {[
             { label: 'something', value: 'hey' },
             { label: 'something else', value: 'hey hey' },
@@ -33,8 +37,10 @@ export function SearchBox(props: SearchBoxProps) {
             )
           )}
         </Select>
-        <div>by</div>
-        <Select>
+        <div className={`search-box__filter-label`}>by</div>
+        <Select
+          className={`search-box__filter-select search-box_filter-select--rank`}
+        >
           {[
             { label: 'something', value: 'hey' },
             { label: 'something else', value: 'hey hey' },
@@ -46,7 +52,9 @@ export function SearchBox(props: SearchBoxProps) {
           )}
         </Select>
         <div>from</div>
-        <Select>
+        <Select
+          className={`search-box__filter-select search-box_filter-select--time`}
+        >
           {[
             { label: 'something', value: 'hey' },
             { label: 'something else', value: 'hey hey' },
