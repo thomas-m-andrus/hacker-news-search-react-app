@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import SharedComponents from './shared-components';
+import Ui from './ui';
 
-describe('SharedComponents', () => {
+describe('Ui', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<SharedComponents />);
+    const { baseElement } = render(<Ui />);
     expect(baseElement).toBeTruthy();
   });
 });

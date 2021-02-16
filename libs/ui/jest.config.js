@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'shared-components',
+  displayName: 'ui',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
@@ -8,5 +8,5 @@ module.exports = {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/shared-components',
+  coverageDirectory: '../../coverage/libs/ui',
 };
