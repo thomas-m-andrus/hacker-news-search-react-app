@@ -1,9 +1,20 @@
 {
   "version": 2,
-  "cli": { "defaultCollection": "@nrwl/next" },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
   "generators": {
-    "@nrwl/react": { "application": { "babel": true } },
-    "@nrwl/next": { "application": { "style": "scss", "linter": "eslint" } }
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
   },
   "defaultProject": "hacker-news-search",
   "projects": {
@@ -14,16 +25,23 @@
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "root": "apps/hacker-news-search",
             "outputPath": "dist/apps/hacker-news-search"
           },
-          "configurations": { "production": {} }
+          "configurations": {
+            "production": {}
+          }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": { "buildTarget": "hacker-news-search:build", "dev": true },
+          "options": {
+            "buildTarget": "hacker-news-search:build",
+            "dev": true
+          },
           "configurations": {
             "production": {
               "buildTarget": "hacker-news-search:build:production",
@@ -33,17 +51,23 @@
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": { "buildTarget": "hacker-news-search:build:production" }
+          "options": {
+            "buildTarget": "hacker-news-search:build:production"
+          }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/hacker-news-search/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/hacker-news-search/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/hacker-news-search"],
+          "outputs": [
+            "coverage/apps/hacker-news-search"
+          ],
           "options": {
             "jestConfig": "apps/hacker-news-search/jest.config.js",
             "passWithNoTests": true
@@ -72,47 +96,10 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/hacker-news-search-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/hacker-news-search-e2e/**/*.{js,ts}"
+            ]
           }
-        }
-      }
-    },
-    "shared-components": {
-      "root": "libs/shared-components",
-      "sourceRoot": "libs/shared-components/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/shared-components/**/*.{ts,tsx,js,jsx}"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared-components"],
-          "options": {
-            "jestConfig": "libs/shared-components/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "storybook": {
-          "executor": "@nrwl/storybook:storybook",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "port": 4400,
-            "config": { "configFolder": "libs/shared-components/.storybook" }
-          },
-          "configurations": { "ci": { "quiet": true } }
-        },
-        "build-storybook": {
-          "executor": "@nrwl/storybook:build",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/shared-components",
-            "config": { "configFolder": "libs/shared-components/.storybook" }
-          },
-          "configurations": { "ci": { "quiet": true } }
         }
       }
     },
@@ -123,14 +110,50 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"] }
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ui"],
+          "outputs": [
+            "coverage/libs/ui"
+          ],
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/ui",
+            "config": {
+              "configFolder": "libs/ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
           }
         }
       }
@@ -142,11 +165,17 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/types/**/*.ts"] }
+          "options": {
+            "lintFilePatterns": [
+              "libs/types/**/*.ts"
+            ]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/types"],
+          "outputs": [
+            "coverage/libs/types"
+          ],
           "options": {
             "jestConfig": "libs/types/jest.config.js",
             "passWithNoTests": true
