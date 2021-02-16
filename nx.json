@@ -1,0 +1,44 @@
+{
+  "npmScope": "hacker-news-search-react-app",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "OWE1Y2MzMDMtYmM4NC00MjAxLTk0OWUtNjBhOTNkOGFjYTJifHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "hacker-news-search": {
+      "tags": []
+    },
+    "hacker-news-search-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "hacker-news-search"
+      ]
+    }
+  }
+}
