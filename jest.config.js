@@ -1,3 +1,6 @@
 module.exports = {
-  projects: ['<rootDir>/apps/hacker-news-search'],
+  projects: [
+    '<rootDir>/apps/hacker-news-search',
+    '<rootDir>/libs/shared-components',
+  ],
 };
