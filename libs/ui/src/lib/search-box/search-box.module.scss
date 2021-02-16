@@ -1,3 +1,12 @@
+.search-box__input-group {
+  display: flex;
+}
 .search-box__filter {
   display: flex;
+  min-width: 300px;
+  max-width: 400px;
+  justify-content: space-between;
+}
+.search-box__filter-select--type {
+  min-width: 80px;
 }
