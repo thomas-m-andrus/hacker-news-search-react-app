@@ -18,7 +18,8 @@
       "@hacker-news-search-react-app/shared-components": [
         "libs/shared-components/src/index.ts"
       ],
-      "@hacker-news-search-react-app/ui": ["libs/ui/src/index.ts"]
+      "@hacker-news-search-react-app/ui": ["libs/ui/src/index.ts"],
+      "@hacker-news-search-react-app/types": ["libs/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

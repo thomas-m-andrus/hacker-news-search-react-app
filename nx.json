@@ -27,6 +27,7 @@
       "implicitDependencies": ["hacker-news-search"]
     },
     "shared-components": { "tags": [] },
-    "ui": { "tags": [] }
+    "ui": { "tags": [] },
+    "types": { "tags": [] }
   }
 }

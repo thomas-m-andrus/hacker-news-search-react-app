@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/hacker-news-search',
     '<rootDir>/libs/shared-components',
     '<rootDir>/libs/ui',
+    '<rootDir>/libs/types',
   ],
 };
