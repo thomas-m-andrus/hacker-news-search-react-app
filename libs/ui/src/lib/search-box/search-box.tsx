@@ -11,13 +11,13 @@ import {
   FormControl,
 } from '@material-ui/core';
 
-export function SearchBox(props: SearchBoxProps) {
+export function SearchBox({ autoCompleteOptions, filters }: SearchBoxProps) {
   return (
     <div className={`search-box`}>
       <div className={`search-box__input-group`}>
         <Autocomplete
           id="combo-box-demo"
-          options={top100Films}
+          options={autoCompleteOptions}
           getOptionLabel={(option) => option}
           style={{ width: 300 }}
           renderInput={(params) => (
@@ -29,35 +29,7 @@ export function SearchBox(props: SearchBoxProps) {
         </Button>
       </div>
       <div className={`search-box__filter`}>
-        {[
-          {
-            label: 'Search',
-            type: 'type',
-            options: [
-              { label: 'something', value: 'hey' },
-              { label: 'something else', value: 'hey hey' },
-              { label: 'something again', value: 'hey hey hey' },
-            ],
-          },
-          {
-            label: 'by',
-            type: 'rank',
-            options: [
-              { label: 'something', value: 'hey' },
-              { label: 'something else', value: 'hey hey' },
-              { label: 'something again', value: 'hey hey hey' },
-            ],
-          },
-          {
-            label: 'from',
-            type: 'time',
-            options: [
-              { label: 'something', value: 'hey' },
-              { label: 'something else', value: 'hey hey' },
-              { label: 'something again', value: 'hey hey hey' },
-            ],
-          }
-        ].map(
+        {filters.map(
           ({ label: titleLabel, options, type }): ReactElement => (
             <FormControl>
               <InputLabel id={`${type.toLowerCase()}-select-label`}>
@@ -81,7 +53,5 @@ export function SearchBox(props: SearchBoxProps) {
     </div>
   );
 }
-
-const top100Films = ['something', 'something else', 'hey'];
 
 export default SearchBox;

@@ -3,10 +3,13 @@
 }
 .search-box__filter {
   display: flex;
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 200px;
+  max-width: 300px;
   justify-content: space-between;
 }
 .search-box__filter-select--type {
   min-width: 80px;
+}
+.search-box__filter-select--time {
+  min-width: 60px;
 }
