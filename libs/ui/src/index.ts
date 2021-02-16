@@ -1,2 +1,1 @@
-export * from './lib/search-page/search-page';
-export * from './lib/ui';
+export * from './lib/search-box/search-box';

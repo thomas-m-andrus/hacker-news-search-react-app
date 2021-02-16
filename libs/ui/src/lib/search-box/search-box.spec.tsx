@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Ui from './ui';
+import SearchBox from './search-box';
 
-describe('Ui', () => {
+describe('SearchBox', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />);
+    const { baseElement } = render(<SearchBox options={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });

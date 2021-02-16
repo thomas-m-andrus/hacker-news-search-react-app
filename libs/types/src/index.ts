@@ -1,1 +1,1 @@
-export * from './lib/ui/search-page';
+export * from './lib/ui/search-box';
