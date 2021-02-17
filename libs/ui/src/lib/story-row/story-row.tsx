@@ -1,5 +1,6 @@
 import React from 'react';
 import { StoryRowProps } from '@hacker-news-search-react-app/types';
+import { MaterialListItemLink } from '@hacker-news-search-react-app/ui';
 import './story-row.module.scss';
 import {
   ListItem,
@@ -9,14 +10,6 @@ import {
 } from '@material-ui/core';
 import parse from 'html-react-parser';
 
-function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
-  return (
-    <li>
-      <ListItem button component="a" {...props} />
-    </li>
-  );
-}
-
 export function StoryRow({
   story: { author, title, url, num_comments, _highlightResult },
 }: StoryRowProps) {
@@ -25,7 +18,7 @@ export function StoryRow({
     _highlightResult.title.matchLevel === 'full';
   const displayTitle = MatchedTitle ? _highlightResult.title.value : title;
   return (
-    <ListItemLink className="story-row" href={url}>
+    <MaterialListItemLink className="story-row" href={url}>
       <ListItemText>
         <Typography variant="h6" component="div" align="left">
           {MatchedTitle ? parse(displayTitle) : displayTitle}
@@ -37,7 +30,7 @@ export function StoryRow({
           Number of Comments: {num_comments}
         </Typography>
       </ListItemText>
-    </ListItemLink>
+    </MaterialListItemLink>
   );
 }
 
