@@ -64,7 +64,11 @@ export function SearchBox({
             value={values.input}
             onInputChange={autoCompleteChange}
             renderInput={(params) => (
-              <TextField {...params} label={labels.input} variant="outlined" />
+              <TextField
+                {...params}
+                label={labels.input}
+                variant="outlined"
+              />
             )}
           />
         ) : (
@@ -74,6 +78,7 @@ export function SearchBox({
             value={values.input}
             variant="outlined"
             onChange={inputChange}
+            inputProps={{ 'aria-label': labels.input }}
           ></TextField>
         )}
         <Button

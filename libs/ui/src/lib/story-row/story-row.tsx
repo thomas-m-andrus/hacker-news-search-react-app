@@ -10,7 +10,11 @@ import {
 import parse from 'html-react-parser';
 
 function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
-  return <ListItem button component="a" {...props} />;
+  return (
+    <li>
+      <ListItem button component="a" {...props} />
+    </li>
+  );
 }
 
 export function StoryRow({
@@ -23,11 +27,13 @@ export function StoryRow({
   return (
     <ListItemLink className="story-row" href={url}>
       <ListItemText>
-        <Typography variant="h6" component="h3" align="left">
+        <Typography variant="h6" component="div" align="left">
           {MatchedTitle ? parse(displayTitle) : displayTitle}
         </Typography>
-        <Typography variant="subtitle1">Author: {author}</Typography>
-        <Typography variant="subtitle2">
+        <Typography variant="subtitle1" component="div">
+          Author: {author}
+        </Typography>
+        <Typography variant="subtitle2" component="div">
           Number of Comments: {num_comments}
         </Typography>
       </ListItemText>
