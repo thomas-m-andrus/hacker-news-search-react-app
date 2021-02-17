@@ -1,5 +1,10 @@
 import React, { ReactElement } from 'react';
-import { SearchBoxProps } from '@hacker-news-search-react-app/types';
+import {
+  SearchBoxProps,
+  InputChangeType,
+  TriggerType,
+  FilterType,
+} from '@hacker-news-search-react-app/types';
 import './search-box.module.scss';
 import { Autocomplete } from '@material-ui/lab';
 import {
@@ -17,7 +22,34 @@ export function SearchBox({
   show,
   labels,
   values,
+  trigger,
 }: SearchBoxProps) {
+  const inputChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ): void => {
+    trigger({
+      type: TriggerType.CHANGE,
+      payload: { type: InputChangeType.INPUT, value: e.target.value },
+    });
+  };
+  const autoCompleteChange = (
+    _: React.ChangeEvent<unknown>,
+    newValue: string
+  ): void => {
+    trigger({
+      type: TriggerType.CHANGE,
+      payload: { type: InputChangeType.INPUT, value: newValue },
+    });
+  };
+  const filterChange = (
+    type: FilterType
+  ): ((event: React.ChangeEvent<{ value: string }>) => void) => {
+    return (event: React.ChangeEvent<{ value: string }>): void =>
+      trigger({
+        type: TriggerType.CHANGE,
+        payload: { type, value: event.target.value },
+      });
+  };
   return (
     <div className={`search-box`}>
       <div className={`search-box__input-group`}>
@@ -28,6 +60,7 @@ export function SearchBox({
             getOptionLabel={(option) => option}
             style={{ width: 300 }}
             value={values.input}
+            onInputChange={autoCompleteChange}
             renderInput={(params) => (
               <TextField {...params} label={labels.input} variant="outlined" />
             )}
@@ -38,6 +71,7 @@ export function SearchBox({
             label={labels.input}
             value={values.input}
             variant="outlined"
+            onChange={inputChange}
           ></TextField>
         )}
         <Button className={`search-box__button`} size="large">
@@ -56,6 +90,7 @@ export function SearchBox({
                 label={titleLabel}
                 className={`search-box__filter-select search-box__filter-select--${type}`}
                 value={values[type]}
+                onChange={filterChange(type)}
               >
                 {options.map(
                   ({ label, value }): ReactElement => (

@@ -43,7 +43,7 @@ export const primary = () => {
     },
   ];
   const props: SearchBoxProps = {
-    autoCompleteOptions: [],
+    autoCompleteOptions: ['something', 'something else', 'tiger'],
     filters,
     show: { autoComplete: boolean('show auto complete', false) },
     labels: {
@@ -55,6 +55,9 @@ export const primary = () => {
       type: filters[0].options[0].value,
       rank: filters[1].options[0].value,
       time: filters[2].options[0].value,
+    },
+    trigger: (msg) => {
+      console.log(msg);
     },
   };
   return <SearchBox {...props} />;

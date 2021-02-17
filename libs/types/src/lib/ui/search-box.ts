@@ -20,10 +20,34 @@ export interface FilterOptionTime extends FilterOption {
 export interface FilterOptionRank extends FilterOption {
   type: FilterType.RANK;
 }
+export enum TriggerType {
+  BUTTON = 'BUTTON',
+  CHANGE = 'CHANGE',
+}
+export enum InputChangeType {
+  INPUT = 'INPUT',
+}
+export const ChangeType = { ...InputChangeType, ...FilterType };
+export type ChangeType = typeof ChangeType;
+
+export interface ButtonTrigger {
+  type: TriggerType.BUTTON;
+}
+export interface FilterChangeTrigger {
+  type: TriggerType.CHANGE;
+  payload: { type: FilterType; value: FilterOptionData['value'] };
+}
+export interface InputChangeTrigger {
+  type: TriggerType.CHANGE;
+  payload: { type: InputChangeType.INPUT; value: string };
+}
+export type Trigger = ButtonTrigger | FilterChangeTrigger | InputChangeTrigger;
+
 export interface SearchBoxProps {
   autoCompleteOptions: string[];
   filters: [FilterOptionType, FilterOptionRank, FilterOptionTime];
   show: { autoComplete: boolean };
   labels: { input: string; button: { search: string } };
   values: Record<FilterType, FilterOptionData['value']> & { input: string };
+  trigger: (msg: Trigger) => void;
 }
