@@ -4,10 +4,12 @@ export enum FilterType {
   RANK = 'rank',
 }
 
+export type FilterOptionData = { label: string; value: string };
+
 export type FilterOption = {
   label: string;
   type: FilterType;
-  options: { label: string; value: string }[];
+  options: FilterOptionData[];
 };
 export interface FilterOptionType extends FilterOption {
   type: FilterType.TYPE;
@@ -21,4 +23,7 @@ export interface FilterOptionRank extends FilterOption {
 export interface SearchBoxProps {
   autoCompleteOptions: string[];
   filters: [FilterOptionType, FilterOptionRank, FilterOptionTime];
+  show: { autoComplete: boolean };
+  labels: { input: string; button: { search: string } };
+  values: Record<FilterType, FilterOptionData['value']> & { input: string };
 }

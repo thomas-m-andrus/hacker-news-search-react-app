@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { SearchBoxProps } from '@hacker-news-search-react-app/types';
 import './search-box.module.scss';
-import TextField from '@material-ui/core/TextField';
 import { Autocomplete } from '@material-ui/lab';
 import {
   Button,
@@ -9,23 +8,40 @@ import {
   MenuItem,
   InputLabel,
   FormControl,
+  TextField,
 } from '@material-ui/core';
 
-export function SearchBox({ autoCompleteOptions, filters }: SearchBoxProps) {
+export function SearchBox({
+  autoCompleteOptions,
+  filters,
+  show,
+  labels,
+  values,
+}: SearchBoxProps) {
   return (
     <div className={`search-box`}>
       <div className={`search-box__input-group`}>
-        <Autocomplete
-          id="combo-box-demo"
-          options={autoCompleteOptions}
-          getOptionLabel={(option) => option}
-          style={{ width: 300 }}
-          renderInput={(params) => (
-            <TextField {...params} label="Combo box" variant="outlined" />
-          )}
-        />
+        {show.autoComplete ? (
+          <Autocomplete
+            id="combo-box-demo"
+            options={autoCompleteOptions}
+            getOptionLabel={(option) => option}
+            style={{ width: 300 }}
+            value={values.input}
+            renderInput={(params) => (
+              <TextField {...params} label={labels.input} variant="outlined" />
+            )}
+          />
+        ) : (
+          <TextField
+            style={{ width: 300 }}
+            label={labels.input}
+            value={values.input}
+            variant="outlined"
+          ></TextField>
+        )}
         <Button className={`search-box__button`} size="large">
-          Search
+          {labels.button.search}
         </Button>
       </div>
       <div className={`search-box__filter`}>
@@ -39,6 +55,7 @@ export function SearchBox({ autoCompleteOptions, filters }: SearchBoxProps) {
                 labelId={`${type.toLowerCase()}-select-label`}
                 label={titleLabel}
                 className={`search-box__filter-select search-box__filter-select--${type}`}
+                value={values[type]}
               >
                 {options.map(
                   ({ label, value }): ReactElement => (
