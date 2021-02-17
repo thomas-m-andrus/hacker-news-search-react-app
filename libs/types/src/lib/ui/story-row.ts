@@ -1,2 +1,4 @@
-/* eslint-disable-next-line */
-export interface StoryRowProps {}
+import { Hit } from '@hacker-news-search-react-app/types';
+export interface StoryRowProps {
+  story: Hit;
+}
