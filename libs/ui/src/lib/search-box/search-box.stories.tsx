@@ -59,6 +59,7 @@ export const primary = () => {
     trigger: (msg) => {
       console.log(msg);
     },
+    disable: { search: boolean('disable button', false) },
   };
   return <SearchBox {...props} />;
 };

@@ -23,6 +23,7 @@ export function SearchBox({
   labels,
   values,
   trigger,
+  disable,
 }: SearchBoxProps) {
   const inputChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -50,6 +51,7 @@ export function SearchBox({
         payload: { type, value: event.target.value },
       });
   };
+  const handleOnClick = () => trigger({ type: TriggerType.BUTTON });
   return (
     <div className={`search-box`}>
       <div className={`search-box__input-group`}>
@@ -74,7 +76,12 @@ export function SearchBox({
             onChange={inputChange}
           ></TextField>
         )}
-        <Button className={`search-box__button`} size="large">
+        <Button
+          className={`search-box__button`}
+          size="large"
+          onClick={handleOnClick}
+          disabled={disable.search}
+        >
           {labels.button.search}
         </Button>
       </div>

@@ -47,6 +47,7 @@ export interface SearchBoxProps {
   autoCompleteOptions: string[];
   filters: [FilterOptionType, FilterOptionRank, FilterOptionTime];
   show: { autoComplete: boolean };
+  disable: { search: boolean };
   labels: { input: string; button: { search: string } };
   values: Record<FilterType, FilterOptionData['value']> & { input: string };
   trigger: (msg: Trigger) => void;
