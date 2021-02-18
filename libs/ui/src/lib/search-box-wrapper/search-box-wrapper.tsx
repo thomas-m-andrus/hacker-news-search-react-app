@@ -1,10 +1,12 @@
-import React, { useReducer, ReducerState } from 'react';
+import React, { useReducer } from 'react';
 import { SearchBox } from '@hacker-news-search-react-app/ui';
 import {
   SearchBoxReducer as State,
   SearchBoxState,
   FilterType,
   Trigger,
+  TriggerType,
+  FilterQueryKey,
 } from '@hacker-news-search-react-app/types';
 import { SearchBoxReducer as reducer } from './reducer';
 
@@ -15,12 +17,29 @@ export interface SearchBoxWrapperProps {}
 
 const initial: State = {
   state: SearchBoxState.BUTTON_DISABLED,
-  values: { input: '', rank: '', time: '', type: '' },
+  values: {
+    input: '',
+    rank: FilterQueryKey.Rank.RELEVANCE,
+    time: FilterQueryKey.Time.ALL_TIME,
+    type: FilterQueryKey.Tags.ALL,
+  },
 };
+
+const mapTagToQuery = {
+  [FilterQueryKey.Tags.ALL]: false,
+  [FilterQueryKey.Tags.COMMENTS]: 'comment',
+  [FilterQueryKey.Tags.STORIES]: 'story',
+};
+
 export function SearchBoxWrapper(props: SearchBoxWrapperProps) {
   const [{ state, values }, dispatch] = useReducer(reducer, initial);
   const trigger = (msg: Trigger): void => {
-    dispatch(msg);
+    if (msg.type === TriggerType.BUTTON) {
+      console.log('I pushed a button', values);
+      console.log('tags:', mapTagToQuery[values.type]);
+    } else {
+      dispatch(msg);
+    }
   };
   return (
     <SearchBox
@@ -34,25 +53,29 @@ export function SearchBoxWrapper(props: SearchBoxWrapperProps) {
         {
           type: FilterType.TYPE,
           label: 'find in',
-          options: [{ label: 'All', value: 'all' }],
+          options: [
+            { label: 'All', value: FilterQueryKey.Tags.ALL },
+            { label: 'Stories', value: FilterQueryKey.Tags.STORIES },
+            { label: 'Comments', value: FilterQueryKey.Tags.COMMENTS },
+          ],
         },
         {
           type: FilterType.RANK,
           label: 'by',
           options: [
-            { label: 'Date', value: 'Date' },
-            { label: 'Popularity', value: 'Popularity' },
+            { label: 'Relevance', value: FilterQueryKey.Rank.RELEVANCE },
+            { label: 'Date', value: FilterQueryKey.Rank.DATE },
           ],
         },
         {
           type: FilterType.TIME,
           label: 'from',
           options: [
-            { label: 'All time', value: 'All Time' },
-            { label: 'Last 24h', value: 'Last 24h' },
-            { label: 'Past Week', value: 'Past Week' },
-            { label: 'Past Month', value: 'Past Month' },
-            { label: 'Past Year', value: 'Past Year' },
+            { label: 'All time', value: FilterQueryKey.Time.ALL_TIME },
+            { label: 'Last 24h', value: FilterQueryKey.Time.LAST_24H },
+            { label: 'Past Week', value: FilterQueryKey.Time.PAST_WEEK },
+            { label: 'Past Month', value: FilterQueryKey.Time.PAST_MONTH },
+            { label: 'Past Year', value: FilterQueryKey.Time.PAST_YEAR },
           ],
         },
       ]}
