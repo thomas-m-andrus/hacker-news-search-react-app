@@ -24,3 +24,7 @@ export const getDateSince = (
   };
   return timeMap[when]();
 };
+export const transformTimeKey = (when: Time): string =>
+  when === Time.ALL_TIME
+    ? ''
+    : convertToEpochTime(getDateSince(when)).toString();
