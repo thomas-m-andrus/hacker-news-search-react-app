@@ -34,6 +34,7 @@ describe('transformTimeKey', (): void => {
   it.each`
     input              | expected        | resultstr
     ${Time.ALL_TIME}   | ${''}           | ${'an empty string'}
+    ${Time.LAST_24H}   | ${'1613502447'} | ${'1613502447'}
     ${Time.PAST_WEEK}  | ${'1612984047'} | ${'1612984047'}
     ${Time.PAST_MONTH} | ${'1610910447'} | ${'1610910447'}
     ${Time.PAST_YEAR}  | ${'1581966447'} | ${'1581966447'}
