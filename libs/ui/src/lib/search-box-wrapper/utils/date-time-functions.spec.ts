@@ -2,12 +2,37 @@ import {
   convertToEpochTime,
   getDateSince,
   transformTimeKey,
+  getDateGoingBack,
 } from './date-time-functions';
 import { Time } from '@hacker-news-search-react-app/types';
 
 jest
   .spyOn(global.Date, 'now')
   .mockImplementation(() => new Date('2021-02-17T19:07:27.736Z').valueOf());
+
+describe('getDateGoingBack', (): void => {
+  const mockedFunction = jest.fn(
+    (date: Date, amount: number) => new Date(Date.now())
+  );
+  afterEach((): void => {
+    mockedFunction.mockReset();
+  });
+  it.each`
+    input     | expected
+    ${0}      | ${-0}
+    ${1}      | ${-1}
+    ${3}      | ${-3}
+    ${200000} | ${-200000}
+  `(
+    'should call mocked function with $expected when input is $input',
+    ({ input, expected }): void => {
+      const result = getDateGoingBack(mockedFunction, input);
+      result();
+      expect(mockedFunction).toHaveBeenCalledTimes(1);
+      expect(mockedFunction).toHaveBeenCalledWith(1613588847736, expected);
+    }
+  );
+});
 describe('getDateSince', (): void => {
   it.each`
     input              | expected                                | resultstr
