@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoryRow } from './story-row';
-import data from '../../../../../mocks/stephen-hawking-has-died.json';
+import { StoryBook_Stephen_Hawking_Data as data } from '@hacker-news-search-react-app/mock';
 import { List } from '@material-ui/core';
 
 export default {

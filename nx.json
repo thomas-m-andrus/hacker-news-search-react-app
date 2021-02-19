@@ -1,14 +1,9 @@
 {
   "npmScope": "hacker-news-search-react-app",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -26,18 +21,13 @@
     }
   },
   "projects": {
-    "hacker-news-search": {
-      "tags": []
-    },
+    "hacker-news-search": { "tags": [] },
     "hacker-news-search-e2e": {
       "tags": [],
       "implicitDependencies": ["hacker-news-search"]
     },
-    "ui": {
-      "tags": []
-    },
-    "types": {
-      "tags": []
-    }
+    "ui": { "tags": [] },
+    "types": { "tags": [] },
+    "mock": { "tags": [] }
   }
 }
