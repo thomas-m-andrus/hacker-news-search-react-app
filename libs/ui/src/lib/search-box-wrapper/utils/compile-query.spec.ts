@@ -1,8 +1,5 @@
-import {
-  FilterQueryKey,
-  SearchBoxProps,
-} from '@hacker-news-search-react-app/types';
 import { compileQuery, encodeParameters, mapTagToQuery } from './compile-query';
+import { compileQueryTest1 } from '@hacker-news-search-react-app/mock';
 
 describe('encodeParameters', (): void => {
   it.each`
@@ -22,59 +19,7 @@ describe('encodeParameters', (): void => {
 jest
   .spyOn(global.Date, 'now')
   .mockImplementation(() => new Date('2021-02-17T19:07:27.736Z').valueOf());
-
-type Inputs = SearchBoxProps['values'];
-type Expected = string;
-type CompileQuery = [Inputs, Expected];
-const permetations = Object.keys(FilterQueryKey.Rank).reduce(
-  (acc, rankKey): CompileQuery[] => {
-    const n1 = Object.keys(FilterQueryKey.Tags).reduce(
-      (acc2, tagKey): CompileQuery[] => {
-        const n2 = Object.keys(FilterQueryKey.Time).reduce(
-          (acc3, timeKey): CompileQuery[] => {
-            const expectedTime = {
-              [FilterQueryKey.Time.ALL_TIME]: '',
-              [FilterQueryKey.Time.LAST_24H]:
-                '&numericFilters=created_at_i>1613502447',
-              [FilterQueryKey.Time.PAST_WEEK]:
-                '&numericFilters=created_at_i>1612984047',
-              [FilterQueryKey.Time.PAST_MONTH]:
-                '&numericFilters=created_at_i>1610910447',
-              [FilterQueryKey.Time.PAST_YEAR]:
-                '&numericFilters=created_at_i>1581966447',
-            }[timeKey];
-            const expectedTag = {
-              [FilterQueryKey.Tags.ALL]: '',
-              [FilterQueryKey.Tags.STORIES]: '&tags=story',
-              [FilterQueryKey.Tags.COMMENTS]: '&tags=comment',
-            }[tagKey];
-            const expected = `http://hn.algolia.com/api/v1/${
-              rankKey === 'DATE' ? 'search_by_date' : 'search'
-            }?query=something%20grand${expectedTag}${expectedTime}`;
-            return [
-              ...acc3,
-              [
-                {
-                  input: 'something grand',
-                  rank: FilterQueryKey.Rank[rankKey],
-                  time: FilterQueryKey.Time[timeKey],
-                  type: FilterQueryKey.Tags[tagKey],
-                },
-                expected,
-              ],
-            ];
-          },
-          []
-        );
-        return [...acc2, ...n2];
-      },
-      []
-    );
-    return [...acc, ...n1];
-  },
-  []
-);
-describe.each(permetations)('compileQuery', (input, expected): void => {
+describe.each(compileQueryTest1)('compileQuery', (input, expected): void => {
   it(`should return ${expected} when input is ${JSON.stringify(
     input
   )}`, (): void => {
