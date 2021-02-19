@@ -7,7 +7,9 @@ import {
   Trigger,
   TriggerType,
   FilterQueryKey,
+  Time,
 } from '@hacker-news-search-react-app/types';
+import { transformTimeKey, compileQuery } from './utils';
 import { SearchBoxReducer as reducer } from './reducer';
 
 import './search-box-wrapper.module.scss';
@@ -25,18 +27,11 @@ const initial: State = {
   },
 };
 
-const mapTagToQuery = {
-  [FilterQueryKey.Tags.ALL]: false,
-  [FilterQueryKey.Tags.COMMENTS]: 'comment',
-  [FilterQueryKey.Tags.STORIES]: 'story',
-};
-
 export function SearchBoxWrapper(props: SearchBoxWrapperProps) {
   const [{ state, values }, dispatch] = useReducer(reducer, initial);
   const trigger = (msg: Trigger): void => {
     if (msg.type === TriggerType.BUTTON) {
-      console.log('I pushed a button', values);
-      console.log('tags:', mapTagToQuery[values.type]);
+      console.log('query:  ', JSON.stringify(compileQuery(values)));
     } else {
       dispatch(msg);
     }
