@@ -64,11 +64,7 @@ export function SearchBox({
             value={values.input}
             onInputChange={autoCompleteChange}
             renderInput={(params) => (
-              <TextField
-                {...params}
-                label={labels.input}
-                variant="outlined"
-              />
+              <TextField {...params} label={labels.input} variant="outlined" />
             )}
           />
         ) : (
@@ -92,8 +88,8 @@ export function SearchBox({
       </div>
       <div className={`search-box__filter`}>
         {filters.map(
-          ({ label: titleLabel, options, type }): ReactElement => (
-            <FormControl>
+          ({ label: titleLabel, options, type }, index): ReactElement => (
+            <FormControl key={`${type.toLowerCase()}-select-${index}`}>
               <InputLabel id={`${type.toLowerCase()}-select-label`}>
                 {titleLabel}
               </InputLabel>
@@ -105,8 +101,10 @@ export function SearchBox({
                 onChange={filterChange(type)}
               >
                 {options.map(
-                  ({ label, value }): ReactElement => (
-                    <MenuItem value={value}>{label}</MenuItem>
+                  ({ label, value }, index2): ReactElement => (
+                    <MenuItem value={value} key={`${label}-${index2}`}>
+                      {label}
+                    </MenuItem>
                   )
                 )}
               </Select>

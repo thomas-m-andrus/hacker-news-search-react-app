@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchBoxWrapper, SearchBoxWrapperProps } from './search-box-wrapper';
+import { SearchBoxWrapper } from './search-box-wrapper';
 
 export default {
   component: SearchBoxWrapper,
@@ -7,8 +7,11 @@ export default {
 };
 
 export const primary = () => {
-  /* eslint-disable-next-line */
-  const props: SearchBoxWrapperProps = {};
-
-  return <SearchBoxWrapper />;
+  return (
+    <SearchBoxWrapper
+      trigger={(msg): void => {
+        console.log('parent trigger: ', msg);
+      }}
+    />
+  );
 };

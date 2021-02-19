@@ -7,15 +7,12 @@ import {
   Trigger,
   TriggerType,
   FilterQueryKey,
-  Time,
+  SearchBoxWrapperProps,
 } from '@hacker-news-search-react-app/types';
-import { transformTimeKey, compileQuery } from './utils';
+import { compileQuery } from './utils';
 import { SearchBoxReducer as reducer } from './reducer';
 
 import './search-box-wrapper.module.scss';
-
-/* eslint-disable-next-line */
-export interface SearchBoxWrapperProps {}
 
 const initial: State = {
   state: SearchBoxState.BUTTON_DISABLED,
@@ -27,11 +24,13 @@ const initial: State = {
   },
 };
 
-export function SearchBoxWrapper(props: SearchBoxWrapperProps) {
+export function SearchBoxWrapper({
+  trigger: triggerToParent,
+}: SearchBoxWrapperProps) {
   const [{ state, values }, dispatch] = useReducer(reducer, initial);
   const trigger = (msg: Trigger): void => {
     if (msg.type === TriggerType.BUTTON) {
-      console.log('query:  ', JSON.stringify(compileQuery(values)));
+      triggerToParent(compileQuery(values));
     } else {
       dispatch(msg);
     }

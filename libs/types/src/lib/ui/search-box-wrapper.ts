@@ -19,3 +19,7 @@ export const FilterQueryKey = {
   Rank: Rank,
   Time: Time,
 };
+
+export interface SearchBoxWrapperProps {
+  trigger: (msg: string) => void;
+}
