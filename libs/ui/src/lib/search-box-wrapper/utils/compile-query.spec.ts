@@ -1,5 +1,6 @@
 import { compileQuery, encodeParameters, mapTagToQuery } from './compile-query';
 import { compileQueryTest1 } from '@hacker-news-search-react-app/mock';
+import { FilterQueryKey } from '@hacker-news-search-react-app/types';
 
 describe('encodeParameters', (): void => {
   it.each`
@@ -26,4 +27,18 @@ describe.each(compileQueryTest1)('compileQuery', (input, expected): void => {
     const result = compileQuery(input);
     expect(result).toBe(expected);
   });
+});
+describe('mapTagToQuery', (): void => {
+  it.each`
+    input                           | expected
+    ${FilterQueryKey.Tags.ALL}      | ${''}
+    ${FilterQueryKey.Tags.COMMENTS} | ${'comment'}
+    ${FilterQueryKey.Tags.STORIES}  | ${'story'}
+  `(
+    'should return $expected when input is $input',
+    ({ input, expected }): void => {
+      const result = mapTagToQuery(input);
+      expect(result).toBe(expected);
+    }
+  );
 });
