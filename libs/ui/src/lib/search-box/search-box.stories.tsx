@@ -51,7 +51,7 @@ export const primary = () => {
       input: text('input label', 'Look for'),
     },
     values: {
-      input: '',
+      input: 'something',
       type: filters[0].options[0].value,
       rank: filters[1].options[0].value,
       time: filters[2].options[0].value,

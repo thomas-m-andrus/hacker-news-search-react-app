@@ -1,3 +1,4 @@
+import { SearchBoxProps } from '@hacker-news-search-react-app/types';
 export enum Tags {
   ALL = 'ALL',
   STORIES = 'STORIES',
@@ -20,6 +21,7 @@ export const FilterQueryKey = {
   Time: Time,
 };
 
-export interface SearchBoxWrapperProps {
-  trigger: (msg: string) => void;
+export interface SearchBoxWrapperProps
+  extends Pick<SearchBoxProps, 'autoCompleteOptions'> {
+  trigger: (msg: { link: string; searchTerm: string }) => void;
 }

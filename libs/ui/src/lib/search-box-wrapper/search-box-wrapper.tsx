@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react';
 import { SearchBox } from '@hacker-news-search-react-app/ui';
 import {
-  SearchBoxReducer as State,
   SearchBoxState,
   FilterType,
   Trigger,
@@ -9,39 +8,34 @@ import {
   FilterQueryKey,
   SearchBoxWrapperProps,
 } from '@hacker-news-search-react-app/types';
-import { compileQuery } from './utils';
+import { compileQuery, initial } from './utils';
 import { SearchBoxReducer as reducer } from './reducer';
 
 import './search-box-wrapper.module.scss';
 
-const initial: State = {
-  state: SearchBoxState.BUTTON_DISABLED,
-  values: {
-    input: '',
-    rank: FilterQueryKey.Rank.RELEVANCE,
-    time: FilterQueryKey.Time.ALL_TIME,
-    type: FilterQueryKey.Tags.ALL,
-  },
-};
-
 export function SearchBoxWrapper({
   trigger: triggerToParent,
+  autoCompleteOptions: unfilteredAutoComplete,
 }: SearchBoxWrapperProps) {
   const [{ state, values }, dispatch] = useReducer(reducer, initial);
   const trigger = (msg: Trigger): void => {
     if (msg.type === TriggerType.BUTTON) {
-      triggerToParent(compileQuery(values));
+      triggerToParent({ link: compileQuery(values), searchTerm: values.input });
     } else {
       dispatch(msg);
     }
   };
+  const autoCompleteOptions = unfilteredAutoComplete.filter((opt): boolean =>
+    new RegExp(values.input.toLowerCase()).test(opt.toLowerCase())
+  );
+  const showAutoComplete = unfilteredAutoComplete.length > 0;
   return (
     <SearchBox
       disable={{ search: state === SearchBoxState.BUTTON_DISABLED }}
       trigger={trigger}
-      show={{ autoComplete: false }}
+      show={{ autoComplete: showAutoComplete }}
       values={values}
-      autoCompleteOptions={[]}
+      autoCompleteOptions={autoCompleteOptions}
       labels={{ button: { search: 'Search' }, input: 'Look for' }}
       filters={[
         {
