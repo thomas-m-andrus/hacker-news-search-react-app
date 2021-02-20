@@ -17,7 +17,10 @@
     "paths": {
       "@hacker-news-search-react-app/ui": ["libs/ui/src/index.ts"],
       "@hacker-news-search-react-app/types": ["libs/types/src/index.ts"],
-      "@hacker-news-search-react-app/mock": ["libs/mock/src/index.ts"]
+      "@hacker-news-search-react-app/mock": ["libs/mock/src/index.ts"],
+      "@hacker-news-search-react-app/redux-store": [
+        "libs/redux-store/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
