@@ -20,8 +20,11 @@ export const FilterQueryKey = {
   Rank: Rank,
   Time: Time,
 };
-
+export interface SearchBoxWrapperTriggerToParent {
+  link: string;
+  searchTerm: string;
+}
 export interface SearchBoxWrapperProps
   extends Pick<SearchBoxProps, 'autoCompleteOptions'> {
-  trigger: (msg: { link: string; searchTerm: string }) => void;
+  trigger: (msg: SearchBoxWrapperTriggerToParent) => void;
 }
