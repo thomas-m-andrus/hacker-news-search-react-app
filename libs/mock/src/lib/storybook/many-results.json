@@ -1,0 +1,799 @@
+{
+  "hits": [
+    {
+      "created_at": "2014-01-29T22:38:58.000Z",
+      "title": "Give HN: I have an idea but I am already doing something else.....",
+      "url": "",
+      "author": "jason_slack",
+      "points": 2,
+      "story_text": "I have an idea for an &quot;Adult Social Networking&quot; concept, say Friends With Benefits. I have a great domain name.<p>I am already working on something else that is totally where I want to be.<p>So who wants the idea and domain name?<p>No, I am not just going to give it away to the first person. I am going to e-mail interview for it as well as ask some technical questions about your background.<p>So e-mail is in my profile. Please allow me adequate time to respond.",
+      "comment_text": null,
+      "num_comments": 6,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1391035138,
+      "relevancy_score": 5119,
+      "_tags": ["story", "author_jason_slack", "story_7147626"],
+      "objectID": "7147626",
+      "_highlightResult": {
+        "title": {
+          "value": "Give HN: I have an idea but I am already doing <em>something</em> <em>else</em>.....",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "jason_slack",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "I have an idea for an &quot;Adult Social Networking&quot; concept, say Friends With Benefits. I have a great domain name.<p>I am already working on <em>something</em> <em>else</em> that is totally where I want to be.<p>So who wants the idea and domain name?<p>No, I am not just going to give it away to the first person. I am going to e-mail interview for it as well as ask some technical questions about your background.<p>So e-mail is in my profile. Please allow me adequate time to respond.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        }
+      }
+    },
+    {
+      "created_at": "2015-05-25T08:07:53.000Z",
+      "title": "Ask HN: Should I buy an iPhone (or something else)?",
+      "url": null,
+      "author": "mrdassani",
+      "points": 2,
+      "story_text": "I hate iOS, but Apple makes some of the best hardware in the world. I&#x27;m currently &#x27;rocking&#x27; an HTC One M7 (Google Play Edition) because stock android is my favourite mobile OS (I&#x27;ve tried them all, but only used android and the old old old windows phone 6-7 significantly). My problems with iOS is its boring &#x27;homescreen&#x27; functionality: I love my widgets (email, twitter, IFTTT buttons etc) and don&#x27;t really know what I&#x27;d do without them. The problem is I need a new phone (mine is almost dead - battery and camera issues), and the current lack of vanilla android offerings is depressing me. I&#x27;m very much a flagship buyer and need someone to convince me why a certain phone works well for them. I also own an android wear device, which basically becomes obsolete if I switch to iOS but that&#x27;s probably something google is working on. A few more things about me: I use my phone a lot (lot lot), I really want a good camera because I only use phone cameras. Any suggestions?",
+      "comment_text": null,
+      "num_comments": 5,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1432541273,
+      "relevancy_score": 6046,
+      "_tags": ["story", "author_mrdassani", "story_9599089", "ask_hn"],
+      "objectID": "9599089",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Should I buy an iPhone (or <em>something</em> <em>else</em>)?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "mrdassani",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "I hate iOS, but Apple makes some of the best hardware in the world. I'm currently 'rocking' an HTC One M7 (Google Play Edition) because stock android is my favourite mobile OS (I've tried them all, but only used android and the old old old windows phone 6-7 significantly). My problems with iOS is its boring 'homescreen' functionality: I love my widgets (email, twitter, IFTTT buttons etc) and don't really know what I'd do without them. The problem is I need a new phone (mine is almost dead - battery and camera issues), and the current lack of vanilla android offerings is depressing me. I'm very much a flagship buyer and need someone to convince me why a certain phone works well for them. I also own an android wear device, which basically becomes obsolete if I switch to iOS but that's probably <em>something</em> google is working on. A few more things about me: I use my phone a lot (lot lot), I really want a good camera because I only use phone cameras. Any suggestions?",
+          "matchLevel": "partial",
+          "fullyHighlighted": false,
+          "matchedWords": ["something"]
+        }
+      }
+    },
+    {
+      "created_at": "2018-09-07T20:23:15.000Z",
+      "title": "Changing Redis master-slave replication terms with something else",
+      "url": "https://github.com/antirez/redis/issues/5335",
+      "author": "itamarhaber",
+      "points": 2,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 5,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1536351795,
+      "relevancy_score": 8344,
+      "_tags": ["story", "author_itamarhaber", "story_17937354"],
+      "objectID": "17937354",
+      "_highlightResult": {
+        "title": {
+          "value": "Changing Redis master-slave replication terms with <em>something</em> <em>else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "https://github.com/antirez/redis/issues/5335",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "itamarhaber",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2015-12-10T12:36:24.000Z",
+      "title": "Ask HN: Take a web development company to the “next level” or do something else?",
+      "url": null,
+      "author": "bugaboo",
+      "points": 2,
+      "story_text": "OK so what do you do to go from being a self employed web developer to running a profitable web business?<p>I&#x27;ve been building websites and web applications for various clients over the last 10 years. Things usually go pretty well but there are still feast &#x2F; famine cycles. Each client gets their own custom proposal - though most small business web solutions seem to end up being a WordPress blog with some customizations. I&#x27;m happy to have the work but this is getting old and it seems like something needs to change.<p>The amount of information about how to run a profitable business is overwhelming. Everyone seems to be selling a class with their &quot;best way&quot; to grow from a web business to selling products (saas or ebooks or web based schools &#x2F; classes or productized consulting and on and on...).<p>I have built a few failed saas web apps and one that has a single customer... In addition to experience solving a variety of business problems, dealing with customers, selling hosting, etc.<p>Right now it feels like I&#x27;m just floating along and things just work out. I&#x27;d like to take more control and define some goals to move into being a product &#x2F; saas based business...<p>It seems odd &#x2F; empty to say that without more specific objectives but at this point I&#x27;m unsure if I should focus on building another web app, work on writing and creating educational material, keep doing web consulting and raise my rates or move on to doing something completely different.<p>I imagine others have been through similar situation s before... Any thoughts or suggestions?",
+      "comment_text": null,
+      "num_comments": 4,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1449750984,
+      "relevancy_score": 6422,
+      "_tags": ["story", "author_bugaboo", "story_10710311", "ask_hn"],
+      "objectID": "10710311",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Take a web development company to the “next level” or do <em>something</em> <em>else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "bugaboo",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "OK so what do you do to go from being a self employed web developer to running a profitable web business?<p>I've been building websites and web applications for various clients over the last 10 years. Things usually go pretty well but there are still feast / famine cycles. Each client gets their own custom proposal - though most small business web solutions seem to end up being a WordPress blog with some customizations. I'm happy to have the work but this is getting old and it seems like <em>something</em> needs to change.<p>The amount of information about how to run a profitable business is overwhelming. Everyone seems to be selling a class with their &quot;best way&quot; to grow from a web business to selling products (saas or ebooks or web based schools / classes or productized consulting and on and on...).<p>I have built a few failed saas web apps and one that has a single customer... In addition to experience solving a variety of business problems, dealing with customers, selling hosting, etc.<p>Right now it feels like I'm just floating along and things just work out. I'd like to take more control and define some goals to move into being a product / saas based business...<p>It seems odd / empty to say that without more specific objectives but at this point I'm unsure if I should focus on building another web app, work on writing and creating educational material, keep doing web consulting and raise my rates or move on to doing <em>something</em> completely different.<p>I imagine others have been through similar situation s before... Any thoughts or suggestions?",
+          "matchLevel": "partial",
+          "fullyHighlighted": false,
+          "matchedWords": ["something"]
+        }
+      }
+    },
+    {
+      "created_at": "2015-06-02T07:35:07.000Z",
+      "title": "Ask HN: Is Snowden a traitor, hero, or something else?",
+      "url": "",
+      "author": "hackercurious",
+      "points": 2,
+      "story_text": "It seems as if enough time has passed to examine the question,<p>&quot;Is Snowden a traitor, hero, or something else?&quot;<p>My hope is that this discussion will be based on the facts that we do know and not just opinions.",
+      "comment_text": null,
+      "num_comments": 3,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1433230507,
+      "relevancy_score": 6059,
+      "_tags": ["story", "author_hackercurious", "story_9644435", "ask_hn"],
+      "objectID": "9644435",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Is Snowden a traitor, hero, or <em>something</em> <em>else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "hackercurious",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "It seems as if enough time has passed to examine the question,<p>&quot;Is Snowden a traitor, hero, or <em>something</em> <em>else</em>?&quot;<p>My hope is that this discussion will be based on the facts that we do know and not just opinions.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        }
+      }
+    },
+    {
+      "created_at": "2014-11-15T04:11:40.000Z",
+      "title": "Does Google Inbox Use Polymer or Something Else?",
+      "url": "",
+      "author": "nahtnam",
+      "points": 2,
+      "story_text": "Does Google Inbox use Polymer&#x27;s paper elements or something else? Is that &quot;something else&quot; open source?<p>Thanks.",
+      "comment_text": null,
+      "num_comments": 3,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1416024700,
+      "relevancy_score": 5670,
+      "_tags": ["story", "author_nahtnam", "story_8610798"],
+      "objectID": "8610798",
+      "_highlightResult": {
+        "title": {
+          "value": "Does Google Inbox Use Polymer or <em>Something</em> <em>Else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "nahtnam",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "Does Google Inbox use Polymer's paper elements or <em>something</em> <em>else</em>? Is that &quot;<em>something</em> <em>else</em>&quot; open source?<p>Thanks.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        }
+      }
+    },
+    {
+      "created_at": "2011-10-27T06:52:22.000Z",
+      "title": "Ask HN: Do you open the browser for something, and end up doing something else?",
+      "url": "",
+      "author": "sathishmanohar",
+      "points": 2,
+      "story_text": "I open the browser to check my analytics lets say, Then there is hacker news in speed dial, then I go for a quick check at hacker news, then I completely forget I opened the browser to check analytics in the first place.<p>Sounds familiar? If you do face this, How do you get around this distraction?",
+      "comment_text": null,
+      "num_comments": 3,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1319698342,
+      "relevancy_score": 3533,
+      "_tags": ["story", "author_sathishmanohar", "story_3161914", "ask_hn"],
+      "objectID": "3161914",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Do you open the browser for <em>something</em>, and end up doing <em>something</em> <em>else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "sathishmanohar",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "I open the browser to check my analytics lets say, Then there is hacker news in speed dial, then I go for a quick check at hacker news, then I completely forget I opened the browser to check analytics in the first place.<p>Sounds familiar? If you do face this, How do you get around this distraction?",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2016-12-07T23:14:28.000Z",
+      "title": "Ask HN: Switching from webdev to something else, suggestions?",
+      "url": null,
+      "author": "csthrw",
+      "points": 2,
+      "story_text": "I&#x27;m currently studying CS and working since 2,5 years part time as a web dev. Started with frontend and now I&#x27;m doing fullstack JS (30 front &#x2F;70 beckend).<p>I kinda feeling tired. Always the same things, create an endpoint and implement crud operations on it.<p>I&#x27;m thinking about switching from webdev to some other area, but I am clueless to where, which areas are you working and are your happy?",
+      "comment_text": null,
+      "num_comments": 3,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1481152468,
+      "relevancy_score": 7121,
+      "_tags": ["story", "author_csthrw", "story_13127100", "ask_hn"],
+      "objectID": "13127100",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Switching from webdev to <em>something</em> <em>else</em>, suggestions?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "csthrw",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "I'm currently studying CS and working since 2,5 years part time as a web dev. Started with frontend and now I'm doing fullstack JS (30 front /70 beckend).<p>I kinda feeling tired. Always the same things, create an endpoint and implement crud operations on it.<p>I'm thinking about switching from webdev to some other area, but I am clueless to where, which areas are you working and are your happy?",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2009-01-26T17:20:45.000Z",
+      "title": "Is Obama's handheld a BlackBerry or something else?",
+      "url": "http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9126696",
+      "author": "allenbrunson",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 2,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1232990445,
+      "relevancy_score": 1611,
+      "_tags": ["story", "author_allenbrunson", "story_450680"],
+      "objectID": "450680",
+      "_highlightResult": {
+        "title": {
+          "value": "Is Obama's handheld a BlackBerry or <em>something</em> <em>else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9126696",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "allenbrunson",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2011-06-13T02:09:04.000Z",
+      "title": "Ask HN: Freedcamp or something else for project management?",
+      "url": "",
+      "author": "tokenadult",
+      "points": 2,
+      "story_text": "My nonprofit corporation's office manager is continually finding out about new online services, and recently suggested using Freedcamp for our project management. I have previously used Basecamp by 37signals for this organization and for another organization. What's your recommendation? What features should I look for in an organization with a lot of remote working (few face-to-face meetings) and a growing online client base?",
+      "comment_text": null,
+      "num_comments": 1,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1307930944,
+      "relevancy_score": 3277,
+      "_tags": ["story", "author_tokenadult", "story_2647881", "ask_hn"],
+      "objectID": "2647881",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Freedcamp or <em>something</em> <em>else</em> for project management?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "tokenadult",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "My nonprofit corporation's office manager is continually finding out about new online services, and recently suggested using Freedcamp for our project management. I have previously used Basecamp by 37signals for this organization and for another organization. What's your recommendation? What features should I look for in an organization with a lot of remote working (few face-to-face meetings) and a growing online client base?",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-10-14T07:01:13.000Z",
+      "title": "‘What Tech Calls Thinking’ Might Be Something Else",
+      "url": "https://www.nytimes.com/2020/10/13/books/review/what-tech-calls-thinking-adrian-daub.html",
+      "author": "bmcn2020",
+      "points": 2,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 1,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1602658873,
+      "_tags": ["story", "author_bmcn2020", "story_24773924"],
+      "objectID": "24773924",
+      "_highlightResult": {
+        "title": {
+          "value": "‘What Tech Calls Thinking’ Might Be <em>Something</em> <em>Else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "https://www.nytimes.com/2020/10/13/books/review/what-tech-calls-thinking-adrian-daub.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "bmcn2020",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-06-22T15:49:11.000Z",
+      "title": "Everyday words that mean something else to programmers. First 65 tell a story",
+      "url": "https://twitter.com/LifeTechPsych/status/1275092453402574848",
+      "author": "windy-topology",
+      "points": 2,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 1,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1592840951,
+      "_tags": ["story", "author_windy-topology", "story_23601531"],
+      "objectID": "23601531",
+      "_highlightResult": {
+        "title": {
+          "value": "Everyday words that mean <em>something</em> <em>else</em> to programmers. First 65 tell a story",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "https://twitter.com/LifeTechPsych/status/1275092453402574848",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "windy-topology",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-02-17T23:59:34.000Z",
+      "title": "Ask HN: Should I use Homebrew, Macports or something else?",
+      "url": null,
+      "author": "yesenadam",
+      "points": 2,
+      "story_text": "I&#x27;ll be upgrading to a &quot;new&quot; Mac today. I&#x27;ve been using Macports a few years, never had any problems at all...except it sometimes takes a long time, installs many different versions of dependencies. I assumed Homebrew would be better, but on reading about it today - it actually sounds worse in many ways, which was a real surprise. Sounds like it sometimes breaks things on your existing system with its upgrades! So am tilting towards staying with Macports. Keeping downloaded packages in a separate place seems sensible.<p>There&#x27;s been discussion on HN about the two, but not for a while it seems. How have things changed lately with both? How do the pros and cons stand currently?<p>And is it possible to use both, or I have to choose one?<p>Thanks.",
+      "comment_text": null,
+      "num_comments": 1,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1581983974,
+      "_tags": ["story", "author_yesenadam", "story_22352156", "ask_hn"],
+      "objectID": "22352156",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Should I use Homebrew, Macports or <em>something</em> <em>else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "yesenadam",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "I'll be upgrading to a &quot;new&quot; Mac today. I've been using Macports a few years, never had any problems at all...except it sometimes takes a long time, installs many different versions of dependencies. I assumed Homebrew would be better, but on reading about it today - it actually sounds worse in many ways, which was a real surprise. Sounds like it sometimes breaks things on your existing system with its upgrades! So am tilting towards staying with Macports. Keeping downloaded packages in a separate place seems sensible.<p>There's been discussion on HN about the two, but not for a while it seems. How have things changed lately with both? How do the pros and cons stand currently?<p>And is it possible to use both, or I have to choose one?<p>Thanks.",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2017-06-10T17:39:44.000Z",
+      "title": "Ask HN: Storage for Raw HTML? ElasticSearch or Something Else?",
+      "url": null,
+      "author": "gerenuk",
+      "points": 2,
+      "story_text": "Hi,<p>I am working on a project where we need to store the response of a web page and have later on do the data processing such as NLP tasks, topic modeling, sentiment analysis etc.<p>The average content&#x2F;documents we are expecting is around 1-2 million per day, and soon that will be increasing to 10-20 million.<p>For this kind of data storage what do you suggest? Is ElasticSearch better for this kind of stuff or should we use HDFS&#x2F;Ceph etc. for the storage?<p>Currently, we are using mongodb for persistent storage and ElasticSearch for indexing the data and serving that to our frontend but if some better option is available we can look into that as we are restructuring our most of the architecture and data pipeline.<p>Any kind of help&#x2F;suggestion will be appreciated.<p>Thanks<p>P.S If someone can share some insights what kind of possible architecture does the brandwatch.com, mention.com or ahrefs.com got for their data pipeline would be really helpful.",
+      "comment_text": null,
+      "num_comments": 1,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1497116384,
+      "relevancy_score": 7471,
+      "_tags": ["story", "author_gerenuk", "story_14528265", "ask_hn"],
+      "objectID": "14528265",
+      "_highlightResult": {
+        "title": {
+          "value": "Ask HN: Storage for Raw HTML? ElasticSearch or <em>Something</em> <em>Else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "gerenuk",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "Hi,<p>I am working on a project where we need to store the response of a web page and have later on do the data processing such as NLP tasks, topic modeling, sentiment analysis etc.<p>The average content/documents we are expecting is around 1-2 million per day, and soon that will be increasing to 10-20 million.<p>For this kind of data storage what do you suggest? Is ElasticSearch better for this kind of stuff or should we use HDFS/Ceph etc. for the storage?<p>Currently, we are using mongodb for persistent storage and ElasticSearch for indexing the data and serving that to our frontend but if some better option is available we can look into that as we are restructuring our most of the architecture and data pipeline.<p>Any kind of help/suggestion will be appreciated.<p>Thanks<p>P.S If someone can share some insights what kind of possible architecture does the brandwatch.com, mention.com or ahrefs.com got for their data pipeline would be really helpful.",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2014-10-02T17:02:31.000Z",
+      "title": "Tesla will unveil new car and 'something else' on October 9th",
+      "url": "http://www.theverge.com/2014/10/1/6886301/tesla-prepares-to-unveil-new-car-and-something-else",
+      "author": "Inception",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 0,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1412269351,
+      "relevancy_score": 5589,
+      "_tags": ["story", "author_Inception", "story_8401697"],
+      "objectID": "8401697",
+      "_highlightResult": {
+        "title": {
+          "value": "Tesla will unveil new car and '<em>something</em> <em>else</em>' on October 9th",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://www.theverge.com/2014/10/1/6886301/tesla-prepares-to-unveil-new-car-and-<em>something</em>-<em>else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "Inception",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2013-08-21T19:10:14.000Z",
+      "title": "DNA testing shows 59% of fish sold as 'tuna' in U.S. is something else",
+      "url": "http://www.treehugger.com/ocean-conservation/dna-testing-shows-59-fish-sold-tuna-us-something-else.html",
+      "author": "MikeCapone",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 0,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1377112214,
+      "relevancy_score": 4810,
+      "_tags": ["story", "author_MikeCapone", "story_6252632"],
+      "objectID": "6252632",
+      "_highlightResult": {
+        "title": {
+          "value": "DNA testing shows 59% of fish sold as 'tuna' in U.S. is <em>something</em> <em>else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://www.treehugger.com/ocean-conservation/dna-testing-shows-59-fish-sold-tuna-us-<em>something</em>-<em>else</em>.html",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "MikeCapone",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2013-05-22T14:08:17.000Z",
+      "title": "Quantum Or Not, New Supercomputer Is Certainly Something Else",
+      "url": "http://www.npr.org/2013/05/22/185532608/quantum-or-not-new-supercomputer-is-certainly-something-else",
+      "author": "septerr",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 0,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1369231697,
+      "relevancy_score": 4635,
+      "_tags": ["story", "author_septerr", "story_5750897"],
+      "objectID": "5750897",
+      "_highlightResult": {
+        "title": {
+          "value": "Quantum Or Not, New Supercomputer Is Certainly <em>Something</em> <em>Else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://www.npr.org/2013/05/22/185532608/quantum-or-not-new-supercomputer-is-certainly-<em>something</em>-<em>else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "septerr",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2013-03-05T12:37:30.000Z",
+      "title": "Regressive Disenfrancishement: Enhance, Fallback or Something else.",
+      "url": "http://briankardell.wordpress.com/2013/03/05/regressive-disenfrancishement-enhance-fallback-or-something-else/",
+      "author": "ximi",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 0,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1362487050,
+      "relevancy_score": 4487,
+      "_tags": ["story", "author_ximi", "story_5324113"],
+      "objectID": "5324113",
+      "_highlightResult": {
+        "title": {
+          "value": "Regressive Disenfrancishement: Enhance, Fallback or <em>Something</em> <em>else</em>.",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://briankardell.wordpress.com/2013/03/05/regressive-disenfrancishement-enhance-fallback-or-<em>something</em>-<em>else</em>/",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "ximi",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2013-02-18T20:38:46.000Z",
+      "title": "Dying of cancer? Or something else?",
+      "url": "http://idlewords.com/2012/09/no_evidence_of_disease.htm",
+      "author": "lkrubner",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 0,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1361219926,
+      "relevancy_score": 4460,
+      "_tags": ["story", "author_lkrubner", "story_5240486"],
+      "objectID": "5240486",
+      "_highlightResult": {
+        "title": {
+          "value": "Dying of cancer? Or <em>something</em> <em>else</em>?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://idlewords.com/2012/09/no_evidence_of_disease.htm",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "lkrubner",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2012-01-02T03:47:43.000Z",
+      "title": "Otherwise do Something Else",
+      "url": "http://cdixon.org/2011/12/02/otherwise-do-something-else/",
+      "author": "Brajeshwar",
+      "points": 2,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 0,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1325476063,
+      "relevancy_score": 3667,
+      "_tags": ["story", "author_Brajeshwar", "story_3414700"],
+      "objectID": "3414700",
+      "_highlightResult": {
+        "title": {
+          "value": "Otherwise do <em>Something</em> <em>Else</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "url": {
+          "value": "http://cdixon.org/2011/12/02/otherwise-do-<em>something</em>-<em>else</em>/",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["something", "else"]
+        },
+        "author": {
+          "value": "Brajeshwar",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    }
+  ],
+  "nbHits": 138044,
+  "page": 3,
+  "nbPages": 50,
+  "hitsPerPage": 20,
+  "exhaustiveNbHits": false,
+  "query": "something else",
+  "params": "advancedSyntax=true&analytics=true&analyticsTags=backend&page=3&query=something+else",
+  "processingTimeMS": 18
+}

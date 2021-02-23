@@ -13,7 +13,7 @@ export interface Hit {
   story_url: string | null;
   parent_id: string | null;
   created_at_i: number;
-  relevancy_score: number;
+  relevancy_score?: number;
   _tags: string[];
   objectID: string;
   _highlightResult: Record<string, HighlightResult>;
