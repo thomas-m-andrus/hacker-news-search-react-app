@@ -20,7 +20,8 @@
       "@hacker-news-search-react-app/mock": ["libs/mock/src/index.ts"],
       "@hacker-news-search-react-app/redux-store": [
         "libs/redux-store/src/index.ts"
-      ]
+      ],
+      "@hacker-news-search-react-app/pages": ["libs/pages/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

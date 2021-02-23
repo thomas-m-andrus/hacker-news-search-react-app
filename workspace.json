@@ -212,6 +212,31 @@
           }
         }
       }
+    },
+    "pages": {
+      "root": "libs/pages",
+      "sourceRoot": "libs/pages/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/pages/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/pages"
+          ],
+          "options": {
+            "jestConfig": "libs/pages/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
