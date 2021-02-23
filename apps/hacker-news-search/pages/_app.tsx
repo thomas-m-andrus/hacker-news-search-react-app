@@ -1,8 +1,9 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ReactComponent as NxLogo } from '../public/nx-logo-white.svg';
-import './styles.css';
+import './styles.scss';
+import { store } from '@hacker-news-search-react-app/redux-store';
+import { Provider } from 'react-redux';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,13 +12,11 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to hacker-news-search!</title>
       </Head>
       <div className="app">
-        <header className="flex">
-          <NxLogo width="75" height="50" />
-          <h1>Welcome to hacker-news-search!</h1>
-        </header>
-        <main>
-          <Component {...pageProps} />
-        </main>
+        <Provider store={store}>
+          <main>
+            <Component {...pageProps} />
+          </main>
+        </Provider>
       </div>
     </>
   );

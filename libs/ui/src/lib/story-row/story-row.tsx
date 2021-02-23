@@ -3,8 +3,6 @@ import { StoryRowProps } from '@hacker-news-search-react-app/types';
 import { MaterialListItemLink } from '@hacker-news-search-react-app/ui';
 import './story-row.module.scss';
 import {
-  ListItem,
-  ListItemProps,
   Typography,
   ListItemText,
 } from '@material-ui/core';
