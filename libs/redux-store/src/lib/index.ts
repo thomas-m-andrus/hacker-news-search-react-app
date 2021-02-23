@@ -1,5 +1,5 @@
 import { searchSlice } from './search.slice';
-import { configureStore, createSelector } from '@reduxjs/toolkit';
+import { configureStore, createSelector, Selector } from '@reduxjs/toolkit';
 
 export const store = configureStore({
   reducer: { search: searchSlice.reducer },
@@ -13,7 +13,10 @@ const getCurrentPage = (state: RootState): number | undefined =>
 const getTotalPages = (state: RootState): number | undefined =>
   state.search.data?.nbPages;
 
-export const getNextPageQuery = createSelector(
+export const getNextPageQuery: Selector<
+  RootState,
+  string | undefined
+> = createSelector(
   [getUrl, getCurrentPage, getTotalPages],
   (url, currentPage, totalPages): string | undefined => {
     if (
