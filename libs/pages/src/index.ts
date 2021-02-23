@@ -1,1 +1,1 @@
-export * from './lib/pages';
+export * from './components/search/search';
