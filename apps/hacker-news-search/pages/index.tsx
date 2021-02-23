@@ -10,7 +10,7 @@ export function Index() {
    */
   return (
     <div className={styles.page}>
-      <a href={'/search'}>try to get to search</a>
+      <a href={'/results'}>results</a>
       <h2>Resources &amp; Tools</h2>
       <p>Thank you for using and showing some ♥ for Nx.</p>
       <div className="flex github-star-container">
