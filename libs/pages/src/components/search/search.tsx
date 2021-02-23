@@ -4,9 +4,11 @@ import {
   RootState,
   AppDispatch,
   searchSlice,
+  getNextPageQuery,
 } from '@hacker-news-search-react-app/redux-store';
 import { useSelector, useDispatch } from 'react-redux';
 import './search.module.scss';
+import { SearchBoxWrapper } from '@hacker-news-search-react-app/ui';
 
 /* eslint-disable-next-line */
 export interface SearchProps {}
@@ -16,19 +18,21 @@ export function Search(props: SearchProps) {
   const {
     search: { apiState, searchTerms, data },
   } = useSelector((state: RootState) => state);
-  useEffect((): void => {
-    dispatch(
-      getHackerNews(
-        'http://hn.algolia.com/api/v1/search_by_date?query=hawking%20died&tags=story&numericFilters=created_at_i>1582080785'
-      )
-    );
-  }, []);
+  const nextPageQuery = useSelector(getNextPageQuery);
   useEffect((): void => {
     console.log(apiState, searchTerms, data);
-  }, [apiState, searchTerms, data]);
+    console.log('next page query:', nextPageQuery);
+  }, [apiState, searchTerms, data, nextPageQuery]);
   return (
     <div>
       <h1>Welcome to search!</h1>
+      <SearchBoxWrapper
+        autoCompleteOptions={searchTerms}
+        trigger={(msg): void => {
+          dispatch(searchSlice.actions.addSearchCase(msg.searchTerm));
+          dispatch(getHackerNews(msg.link));
+        }}
+      ></SearchBoxWrapper>
     </div>
   );
 }

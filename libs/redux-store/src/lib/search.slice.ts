@@ -33,7 +33,8 @@ export const searchSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getHackerNews.pending, (state) => {
+    builder.addCase(getHackerNews.pending, (state, action) => {
+      state.url = action.meta.arg.replace(/page=\d+/, '');
       state.apiState = ApiState.PENDING;
     });
     builder.addCase(getHackerNews.rejected, (state, action) => {

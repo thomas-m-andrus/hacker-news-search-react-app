@@ -15,4 +15,5 @@ export interface SearchState {
   data?: Response;
   error?: string;
   apiState: ApiState;
+  url?:string
 }
