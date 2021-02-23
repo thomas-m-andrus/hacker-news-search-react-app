@@ -1,9 +1,5 @@
-import {
-  createAsyncThunk,
-  createSlice,
-  PayloadAction,
-} from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import axios, { AxiosResponse } from 'axios';
 import {
   SearchState,
   SearchBoxWrapperTriggerToParent as SearchMessage,
@@ -45,9 +41,12 @@ export const searchSlice = createSlice({
         action.error.message ?? 'There was an error retrieving your request';
       state.apiState = ApiState.ERRORED;
     });
-    builder.addCase(getHackerNews.fulfilled, (state, action) => {
-      state.data = action.payload;
-      state.apiState = ApiState.RESOLVED;
-    });
+    builder.addCase(
+      getHackerNews.fulfilled,
+      (state, action: PayloadAction<AxiosResponse<Response>>) => {
+        state.data = action.payload.data;
+        state.apiState = ApiState.RESOLVED;
+      }
+    );
   },
 });
