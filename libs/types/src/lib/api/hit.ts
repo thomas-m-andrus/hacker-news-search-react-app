@@ -2,7 +2,7 @@ import { HighlightResult } from '@hacker-news-search-react-app/types';
 export interface Hit {
   created_at: string;
   title: string;
-  url: string;
+  url: string | null;
   author: string;
   points: number;
   story_text: string | null;
@@ -12,7 +12,7 @@ export interface Hit {
   story_title: string | null;
   story_url: string | null;
   parent_id: string | null;
-  created_at_i: number;
+  created_at_i?: number;
   relevancy_score?: number;
   _tags: string[];
   objectID: string;

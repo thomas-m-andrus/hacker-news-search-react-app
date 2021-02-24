@@ -1,6 +1,6 @@
-import { HighlightResult } from '@hacker-news-search-react-app/types';
+import { Hit } from '@hacker-news-search-react-app/types';
 export interface Response {
-  hits: HighlightResult[];
+  hits: Hit[];
   nbHits: number;
   page: number;
   nbPages: number;

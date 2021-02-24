@@ -7,3 +7,4 @@ export * from './lib/ui/search-box-reducer';
 export * from './lib/ui/search-box-wrapper';
 export * from './lib/redux-store/search-slice';
 export * from './lib/api/response';
+export * from './lib/ui/results';

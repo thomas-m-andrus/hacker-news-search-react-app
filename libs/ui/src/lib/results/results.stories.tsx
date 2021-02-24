@@ -1,5 +1,7 @@
 import React from 'react';
-import { Results, ResultsProps } from './results';
+import { Results } from './results';
+import { Storybook_Many_Results_Data as Data } from '@hacker-news-search-react-app/mock';
+import { ResultsProps, ApiState } from '@hacker-news-search-react-app/types';
 
 export default {
   component: Results,
@@ -7,8 +9,12 @@ export default {
 };
 
 export const primary = () => {
-  /* eslint-disable-next-line */
-  const props: ResultsProps = {};
-
-  return <Results />;
+  const stuff: ResultsProps['data'] = Data;
+  return (
+    <Results
+      data={stuff}
+      labels={{ loading: 'loading...' }}
+      apiState={ApiState.RESOLVED}
+    />
+  );
 };
