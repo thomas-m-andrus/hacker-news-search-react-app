@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   getHackerNews,
   RootState,
@@ -10,10 +10,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './search.module.scss';
 import { SearchBoxWrapper } from '@hacker-news-search-react-app/ui';
 
-/* eslint-disable-next-line */
-export interface SearchProps {}
-
-export function Search(props: SearchProps) {
+export function Search() {
   const dispatch = useDispatch<AppDispatch>();
   const {
     search: { searchTerms },

@@ -1,5 +1,5 @@
 import React, { ReactElement, useEffect } from 'react';
-import { Results, ResultsProps } from './results';
+import { Results } from './results';
 import {
   store,
   AppDispatch,
@@ -17,7 +17,7 @@ const GetInitial = (): ReactElement => {
   useEffect((): void => {
     dispatch(
       getHackerNews(
-        'http://hn.algolia.com/api/v1/search?query=something%20else&page=3'
+        'http://hn.algolia.com/api/v1/search?query=something%20else'
       )
     );
   }, [dispatch]);
@@ -25,9 +25,6 @@ const GetInitial = (): ReactElement => {
 };
 
 export const primary = () => {
-  /* eslint-disable-next-line */
-  const props: ResultsProps = {};
-
   return (
     <Provider store={store}>
       <GetInitial></GetInitial>

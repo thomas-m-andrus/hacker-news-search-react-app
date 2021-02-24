@@ -10,10 +10,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import './results.module.scss';
 
-/* eslint-disable-next-line */
-export interface ResultsProps {}
-
-export function Results(props: ResultsProps) {
+export function Results() {
   const queryWithoutPageNumber = useSelector(getQueryToAddPageNumber);
   const apiState = useSelector((state: RootState) => state.search.apiState);
   const data = useSelector((state: RootState) => state.search.data);
