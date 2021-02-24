@@ -4,10 +4,9 @@ import {
   RootState,
   AppDispatch,
   searchSlice,
-  getNextPageQuery,
 } from '@hacker-news-search-react-app/redux-store';
 import { SearchBoxWrapperTriggerToParent as Trigger } from '@hacker-news-search-react-app/types';
-import { useSelector, useDispatch, Selector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './search.module.scss';
 import { SearchBoxWrapper } from '@hacker-news-search-react-app/ui';
 

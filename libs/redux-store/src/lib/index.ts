@@ -12,7 +12,18 @@ const getCurrentPage = (state: RootState): number | undefined =>
   state.search.data?.page;
 const getTotalPages = (state: RootState): number | undefined =>
   state.search.data?.nbPages;
-
+export const getQueryToAddPageNumber: Selector<
+  RootState,
+  string | undefined
+> = createSelector([getUrl, getTotalPages], (url, totalPages):
+  | string
+  | undefined => {
+  if (![url, totalPages].includes(undefined) && 1 < totalPages) {
+    return `${url}&page=`;
+  } else {
+    return undefined;
+  }
+});
 export const getNextPageQuery: Selector<
   RootState,
   string | undefined

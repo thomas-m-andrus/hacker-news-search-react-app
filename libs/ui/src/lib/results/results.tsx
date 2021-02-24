@@ -62,11 +62,11 @@ export function Results({
             {...{
               count: data.nbPages,
               disabled: apiState === ApiState.PENDING,
-              page: data.page,
+              page: data.page + 1,
               onChange: (_, newPage): void => {
                 trigger({
                   type: ResultTriggerType.PAGINATE,
-                  paylaod: { page: newPage },
+                  paylaod: { page: newPage - 1 },
                 });
               },
             }}
