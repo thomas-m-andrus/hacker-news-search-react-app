@@ -2,10 +2,7 @@ import React from 'react';
 import { StoryRowProps } from '@hacker-news-search-react-app/types';
 import { MaterialListItemLink } from '@hacker-news-search-react-app/ui';
 import './story-row.module.scss';
-import {
-  Typography,
-  ListItemText,
-} from '@material-ui/core';
+import { Typography, ListItemText, ListItem } from '@material-ui/core';
 import parse from 'html-react-parser';
 
 export function StoryRow({
@@ -15,8 +12,10 @@ export function StoryRow({
     Object.prototype.hasOwnProperty.call(_highlightResult, 'title') &&
     _highlightResult.title.matchLevel === 'full';
   const displayTitle = MatchedTitle ? _highlightResult.title.value : title;
+  const validURL = !['', null].includes(url);
+  const RenderListItem = validURL ? MaterialListItemLink : ListItem;
   return (
-    <MaterialListItemLink className="story-row" href={url}>
+    <RenderListItem className="story-row" href={validURL ? url : undefined}>
       <ListItemText>
         <Typography variant="h6" component="div" align="left">
           {MatchedTitle ? parse(displayTitle) : displayTitle}
@@ -28,7 +27,7 @@ export function StoryRow({
           Number of Comments: {num_comments}
         </Typography>
       </ListItemText>
-    </MaterialListItemLink>
+    </RenderListItem>
   );
 }
 

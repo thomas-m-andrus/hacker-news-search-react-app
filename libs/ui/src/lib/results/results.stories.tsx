@@ -8,13 +8,43 @@ export default {
   title: 'Results',
 };
 
-export const primary = () => {
+export const resolved = () => {
   const stuff: ResultsProps['data'] = Data;
   return (
     <Results
       data={stuff}
       labels={{ loading: 'loading...' }}
       apiState={ApiState.RESOLVED}
+    />
+  );
+};
+export const initial = () => {
+  const stuff: ResultsProps['data'] = Data;
+  return (
+    <Results
+      data={stuff}
+      labels={{ loading: 'loading...' }}
+      apiState={ApiState.INITIAL}
+    />
+  );
+};
+export const pending = () => {
+  const stuff: ResultsProps['data'] = Data;
+  return (
+    <Results
+      data={stuff}
+      labels={{ loading: 'loading...' }}
+      apiState={ApiState.PENDING}
+    />
+  );
+};
+export const errored = () => {
+  const stuff: ResultsProps['data'] = Data;
+  return (
+    <Results
+      data={stuff}
+      labels={{ loading: 'loading...' }}
+      apiState={ApiState.ERRORED}
     />
   );
 };
