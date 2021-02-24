@@ -6,7 +6,7 @@ import {
   ResultTriggerType,
 } from '@hacker-news-search-react-app/types';
 import './results.module.scss';
-import { List, Box } from '@material-ui/core';
+import { List, Box, Typography } from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
@@ -26,6 +26,7 @@ export function Results({
     dataExists &&
     data.nbPages > 1;
   const showError = ApiState.ERRORED === apiState;
+  const pageLabel = `Page ${data.page + 1} of ${data.nbPages}`;
   return (
     <div className={`results`}>
       {showError && (
@@ -38,13 +39,27 @@ export function Results({
           display="flex"
           justifyContent="center"
           className="results__progress"
+          position="relative"
         >
           <CircularProgress aria-label={labels.loading}></CircularProgress>
+          <Box
+            left={0}
+            bottom={-30}
+            right={0}
+            position="absolute"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Typography variant="caption" component="div" color="textSecondary">
+              {dataExists ? `Loading ${pageLabel}` : labels.loading}
+            </Typography>
+          </Box>
         </Box>
       )}
       {showRows && (
         <>
-          <h1>{`Page ${data.page + 1} of ${data.nbPages}`}</h1>
+          <h1>{pageLabel}</h1>
           <List>
             {data.hits.map((element, idx) => (
               <StoryRow
