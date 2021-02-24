@@ -1,0 +1,11 @@
+.results__pagination {
+  & > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.results__progress {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

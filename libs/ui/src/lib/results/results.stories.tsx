@@ -8,6 +8,9 @@ export default {
   title: 'Results',
 };
 
+const trigger = (msg): void => {
+  console.log(msg);
+};
 export const resolved = () => {
   const stuff: ResultsProps['data'] = Data;
   return (
@@ -15,6 +18,7 @@ export const resolved = () => {
       data={stuff}
       labels={{ loading: 'loading...' }}
       apiState={ApiState.RESOLVED}
+      trigger={trigger}
     />
   );
 };
@@ -25,6 +29,7 @@ export const initial = () => {
       data={stuff}
       labels={{ loading: 'loading...' }}
       apiState={ApiState.INITIAL}
+      trigger={trigger}
     />
   );
 };
@@ -35,6 +40,7 @@ export const pending = () => {
       data={stuff}
       labels={{ loading: 'loading...' }}
       apiState={ApiState.PENDING}
+      trigger={trigger}
     />
   );
 };
@@ -45,6 +51,7 @@ export const errored = () => {
       data={stuff}
       labels={{ loading: 'loading...' }}
       apiState={ApiState.ERRORED}
+      trigger={trigger}
     />
   );
 };

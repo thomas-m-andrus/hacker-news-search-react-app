@@ -1,20 +1,47 @@
 import React from 'react';
 import { StoryRow } from '@hacker-news-search-react-app/ui';
-import { ResultsProps, ApiState } from '@hacker-news-search-react-app/types';
+import {
+  ResultsProps,
+  ApiState,
+  ResultTriggerType,
+} from '@hacker-news-search-react-app/types';
 import './results.module.scss';
-import { List } from '@material-ui/core';
+import { List, Box } from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Alert from '@material-ui/lab/Alert';
 
-export function Results({ data, apiState, error, labels }: ResultsProps) {
+export function Results({
+  data,
+  apiState,
+  error,
+  labels,
+  trigger,
+}: ResultsProps) {
   const dataExists = data !== undefined;
   const showLoading = apiState === ApiState.PENDING;
   const showRows = apiState === ApiState.RESOLVED && dataExists;
-  const showPagination = apiState !== ApiState.INITIAL && dataExists;
+  const showPagination =
+    [ApiState.PENDING, ApiState.RESOLVED].includes(apiState) &&
+    dataExists &&
+    data.nbPages > 1;
+  const showError = ApiState.ERRORED === apiState;
   return (
-    <div>
-      <h1>Welcome to results!</h1>
-      {showLoading && <CircularProgress></CircularProgress>}
+    <div className={`results`}>
+      {showError && (
+        <Alert severity="error">
+          {error ?? `Something has gone wrong, try reloading the page!`}
+        </Alert>
+      )}
+      {showLoading && (
+        <Box
+          display="flex"
+          justifyContent="center"
+          className="results__progress"
+        >
+          <CircularProgress aria-label={labels.loading}></CircularProgress>
+        </Box>
+      )}
       {showRows && (
         <List>
           {data.hits.map((element, idx) => (
@@ -29,7 +56,23 @@ export function Results({ data, apiState, error, labels }: ResultsProps) {
           ))}
         </List>
       )}
-      {showPagination && <Pagination {...{ count: data.nbPages }}></Pagination>}
+      {showPagination && (
+        <Box display="flex" justifyContent="center">
+          <Pagination
+            {...{
+              count: data.nbPages,
+              disabled: apiState === ApiState.PENDING,
+              page: data.page,
+              onChange: (_, newPage): void => {
+                trigger({
+                  type: ResultTriggerType.PAGINATE,
+                  paylaod: { page: newPage },
+                });
+              },
+            }}
+          ></Pagination>
+        </Box>
+      )}
     </div>
   );
 }
