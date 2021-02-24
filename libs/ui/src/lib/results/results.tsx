@@ -43,18 +43,21 @@ export function Results({
         </Box>
       )}
       {showRows && (
-        <List>
-          {data.hits.map((element, idx) => (
-            <StoryRow
-              key={`story_result_${element.story_id}_${idx}`}
-              story={element}
-              labels={{
-                author: 'Author:',
-                commentNumber: 'Number of comments:',
-              }}
-            ></StoryRow>
-          ))}
-        </List>
+        <>
+          <h1>{`Page ${data.page + 1} of ${data.nbPages}`}</h1>
+          <List>
+            {data.hits.map((element, idx) => (
+              <StoryRow
+                key={`story_result_${element.story_id}_${idx}`}
+                story={element}
+                labels={{
+                  author: 'Author:',
+                  commentNumber: 'Number of comments:',
+                }}
+              ></StoryRow>
+            ))}
+          </List>
+        </>
       )}
       {showPagination && (
         <Box display="flex" justifyContent="center">
