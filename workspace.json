@@ -6,7 +6,16 @@
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "scss",
+        "linter": "eslint",
         "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
       }
     },
     "@nrwl/next": {
@@ -264,6 +273,78 @@
             "ci": {
               "quiet": true
             }
+          }
+        }
+      }
+    },
+    "react-hacker-news-app": {
+      "root": "apps/react-hacker-news-app",
+      "sourceRoot": "apps/react-hacker-news-app/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/react-hacker-news-app",
+            "index": "apps/react-hacker-news-app/src/index.html",
+            "main": "apps/react-hacker-news-app/src/main.tsx",
+            "polyfills": "apps/react-hacker-news-app/src/polyfills.ts",
+            "tsConfig": "apps/react-hacker-news-app/tsconfig.app.json",
+            "assets": [
+              "apps/react-hacker-news-app/src/favicon.ico",
+              "apps/react-hacker-news-app/src/assets"
+            ],
+            "styles": [
+              "apps/react-hacker-news-app/src/styles.scss"
+            ],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/react-hacker-news-app/src/environments/environment.ts",
+                  "with": "apps/react-hacker-news-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "react-hacker-news-app:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "react-hacker-news-app:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/react-hacker-news-app/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         }
       }

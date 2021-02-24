@@ -18,12 +18,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "OWE1Y2MzMDMtYmM4NC00MjAxLTk0OWUtNjBhOTNkOGFjYTJifHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -36,9 +31,7 @@
     },
     "hacker-news-search-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "hacker-news-search"
-      ]
+      "implicitDependencies": ["hacker-news-search"]
     },
     "ui": {
       "tags": []
@@ -53,6 +46,9 @@
       "tags": []
     },
     "pages": {
+      "tags": []
+    },
+    "react-hacker-news-app": {
       "tags": []
     }
   }

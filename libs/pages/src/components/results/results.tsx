@@ -23,6 +23,7 @@ export function Results() {
   };
   return (
     <div>
+      <div>{apiState}</div>
       <ResultsUI
         data={data}
         apiState={apiState}
