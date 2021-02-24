@@ -8,3 +8,4 @@ export * from './lib/ui/search-box-wrapper';
 export * from './lib/redux-store/search-slice';
 export * from './lib/api/response';
 export * from './lib/ui/results';
+export * from './lib/pages/search-page';

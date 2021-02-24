@@ -26,7 +26,9 @@ export function Results({
     dataExists &&
     data.nbPages > 1;
   const showError = ApiState.ERRORED === apiState;
-  const pageLabel = `Page ${data.page + 1} of ${data.nbPages}`;
+  const pageLabel = dataExists
+    ? `Page ${data.page + 1} of ${data.nbPages}`
+    : '';
   return (
     <div className={`results`}>
       {showError && (

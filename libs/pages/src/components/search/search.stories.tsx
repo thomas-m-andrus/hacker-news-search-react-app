@@ -11,7 +11,11 @@ export default {
 export const primary = () => {
   return (
     <Provider store={store}>
-      <Search />
+      <Search
+        trigger={(): void => {
+          console.log('the search button was triggered');
+        }}
+      />
     </Provider>
   );
 };

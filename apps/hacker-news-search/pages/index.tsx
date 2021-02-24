@@ -10,8 +10,11 @@ export function Index() {
    */
   return (
     <div className={styles.page}>
-      <a href={'/results'}>results</a>
-      <Search></Search>
+      <Search
+        trigger={(_): void => {
+          window.location.href = '/results';
+        }}
+      ></Search>
     </div>
   );
 }

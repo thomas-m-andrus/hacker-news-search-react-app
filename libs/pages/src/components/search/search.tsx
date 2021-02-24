@@ -5,12 +5,16 @@ import {
   AppDispatch,
   searchSlice,
 } from '@hacker-news-search-react-app/redux-store';
-import { SearchBoxWrapperTriggerToParent as Trigger } from '@hacker-news-search-react-app/types';
+import {
+  SearchBoxWrapperTriggerToParent as Trigger,
+  SearchPageProps,
+  TriggerType,
+} from '@hacker-news-search-react-app/types';
 import { useSelector, useDispatch } from 'react-redux';
 import './search.module.scss';
 import { SearchBoxWrapper } from '@hacker-news-search-react-app/ui';
 
-export function Search() {
+export function Search({ trigger: triggerToParent }: SearchPageProps) {
   const dispatch = useDispatch<AppDispatch>();
   const {
     search: { searchTerms },
@@ -18,6 +22,7 @@ export function Search() {
   const handleTrigger = (msg: Trigger): void => {
     dispatch(searchSlice.actions.addSearchCase(msg.searchTerm));
     dispatch(getHackerNews(msg.link));
+    triggerToParent({ type: TriggerType.BUTTON });
   };
   return (
     <div className="search-page">
