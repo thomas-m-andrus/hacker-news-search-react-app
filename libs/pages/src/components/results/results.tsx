@@ -6,7 +6,6 @@ import {
   getQueryToAddPageNumber,
   RootState,
   AppDispatch,
-  searchSlice,
 } from '@hacker-news-search-react-app/redux-store';
 import { useSelector, useDispatch } from 'react-redux';
 import './results.module.scss';
@@ -24,7 +23,6 @@ export function Results() {
   };
   return (
     <div>
-      <div>{apiState}</div>
       <ResultsUI
         data={data}
         apiState={apiState}

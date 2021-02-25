@@ -7,12 +7,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './app/app';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+  // <React.StrictMode>//MUI's components cause an issue
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  // </React.StrictMode>
   document.getElementById('root')
 );
