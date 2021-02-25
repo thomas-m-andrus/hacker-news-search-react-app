@@ -1,6 +1,9 @@
 # Relivant Commands
 
-This repo is configured with many commands however only a few have been focused on.
+This repo was initialized using Nx and lerages React and redux. The final app allows a user to:
+- search the Hacker news site using their public api
+- display search results and links to those results
+- retains a history of search results as long as the page isn't reloaded
 ## Storybook
 
 - nx run ui:storybook
