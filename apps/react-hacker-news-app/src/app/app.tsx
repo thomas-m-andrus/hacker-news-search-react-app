@@ -11,7 +11,6 @@ export function App() {
   const history = useHistory();
   return (
     <div className={styles.app}>
-      <Link to={'/results'}>go to results</Link>
       <Switch>
         <Route
           path="/"
@@ -31,6 +30,7 @@ export function App() {
           exact
           render={() => (
             <div>
+              <Link to={'/'}>Back to Search</Link>
               <ResultsComponent></ResultsComponent>
             </div>
           )}

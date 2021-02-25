@@ -1,8 +1,10 @@
 import { searchSlice } from './search.slice';
 import { configureStore, createSelector, Selector } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 
 export const store = configureStore({
   reducer: { search: searchSlice.reducer },
+  middleware: [thunk],
 });
 
 export type RootState = ReturnType<typeof store.getState>;
