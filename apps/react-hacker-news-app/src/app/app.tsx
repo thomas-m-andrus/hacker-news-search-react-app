@@ -5,7 +5,7 @@ import {
   Search,
   Results as ResultsComponent,
 } from '@hacker-news-search-react-app/pages';
-import { Route, Link, Switch, Router, useHistory } from 'react-router-dom';
+import { Route, Link, Switch, useHistory } from 'react-router-dom';
 
 export function App() {
   const history = useHistory();

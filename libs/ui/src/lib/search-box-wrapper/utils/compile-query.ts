@@ -5,7 +5,7 @@ import {
   FilterQueryKey,
   Time,
 } from '@hacker-news-search-react-app/types';
-import { transformTimeKey } from '.';
+import { transformTimeKey } from './date-time-functions';
 
 export const mapTagToQuery = (key: Tags): string => {
   return {

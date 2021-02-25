@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { SearchBox } from '@hacker-news-search-react-app/ui';
+import { SearchBox } from '../search-box/search-box';
 import {
   SearchBoxState,
   FilterType,

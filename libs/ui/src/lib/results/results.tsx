@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryRow } from '@hacker-news-search-react-app/ui';
+import { StoryRow } from '../story-row/story-row';
 import {
   ResultsProps,
   ApiState,

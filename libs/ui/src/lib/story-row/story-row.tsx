@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoryRowProps } from '@hacker-news-search-react-app/types';
-import { MaterialListItemLink } from '@hacker-news-search-react-app/ui';
+import { MaterialListItemLink } from '../material-list-item-link/material-list-item-link';
 import './story-row.module.scss';
 import { Typography, ListItemText, ListItem } from '@material-ui/core';
 import parse from 'html-react-parser';
