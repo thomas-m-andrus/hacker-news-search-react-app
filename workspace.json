@@ -1,117 +1,15 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
+  "cli": { "defaultCollection": "@nrwl/next" },
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
+      "application": { "style": "scss", "linter": "eslint", "babel": true },
+      "component": { "style": "scss" },
+      "library": { "style": "scss", "linter": "eslint" }
     },
-    "@nrwl/next": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    }
+    "@nrwl/next": { "application": { "style": "scss", "linter": "eslint" } }
   },
-  "defaultProject": "hacker-news-search",
   "projects": {
-    "hacker-news-search": {
-      "root": "apps/hacker-news-search",
-      "sourceRoot": "apps/hacker-news-search",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/next:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "root": "apps/hacker-news-search",
-            "outputPath": "dist/apps/hacker-news-search"
-          },
-          "configurations": {
-            "production": {}
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "hacker-news-search:build",
-            "dev": true
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "hacker-news-search:build:production",
-              "dev": false
-            }
-          }
-        },
-        "export": {
-          "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "hacker-news-search:build:production"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/hacker-news-search/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/hacker-news-search"
-          ],
-          "options": {
-            "jestConfig": "apps/hacker-news-search/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "hacker-news-search-e2e": {
-      "root": "apps/hacker-news-search-e2e",
-      "sourceRoot": "apps/hacker-news-search-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/hacker-news-search-e2e/cypress.json",
-            "tsConfig": "apps/hacker-news-search-e2e/tsconfig.e2e.json",
-            "devServerTarget": "hacker-news-search:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "hacker-news-search:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/hacker-news-search-e2e/**/*.{js,ts}"
-            ]
-          }
-        }
-      }
-    },
     "ui": {
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",
@@ -119,17 +17,11 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/ui/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
+          "options": { "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/ui"
-          ],
+          "outputs": ["coverage/libs/ui"],
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
             "passWithNoTests": true
@@ -140,30 +32,18 @@
           "options": {
             "uiFramework": "@storybook/react",
             "port": 4400,
-            "config": {
-              "configFolder": "libs/ui/.storybook"
-            }
+            "config": { "configFolder": "libs/ui/.storybook" }
           },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
+          "configurations": { "ci": { "quiet": true } }
         },
         "build-storybook": {
           "executor": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
             "outputPath": "dist/storybook/ui",
-            "config": {
-              "configFolder": "libs/ui/.storybook"
-            }
+            "config": { "configFolder": "libs/ui/.storybook" }
           },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
+          "configurations": { "ci": { "quiet": true } }
         }
       }
     },
@@ -174,17 +54,11 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/types/**/*.ts"
-            ]
-          }
+          "options": { "lintFilePatterns": ["libs/types/**/*.ts"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/types"
-          ],
+          "outputs": ["coverage/libs/types"],
           "options": {
             "jestConfig": "libs/types/jest.config.js",
             "passWithNoTests": true
@@ -199,11 +73,7 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/mock/**/*.ts"
-            ]
-          }
+          "options": { "lintFilePatterns": ["libs/mock/**/*.ts"] }
         }
       }
     },
@@ -215,9 +85,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/redux-store/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["libs/redux-store/**/*.{ts,tsx,js,jsx}"]
           }
         }
       }
@@ -229,17 +97,11 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/pages/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
+          "options": { "lintFilePatterns": ["libs/pages/**/*.{ts,tsx,js,jsx}"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/pages"
-          ],
+          "outputs": ["coverage/libs/pages"],
           "options": {
             "jestConfig": "libs/pages/jest.config.js",
             "passWithNoTests": true
@@ -250,30 +112,18 @@
           "options": {
             "uiFramework": "@storybook/react",
             "port": 4400,
-            "config": {
-              "configFolder": "libs/pages/.storybook"
-            }
+            "config": { "configFolder": "libs/pages/.storybook" }
           },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
+          "configurations": { "ci": { "quiet": true } }
         },
         "build-storybook": {
           "executor": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
             "outputPath": "dist/storybook/pages",
-            "config": {
-              "configFolder": "libs/pages/.storybook"
-            }
+            "config": { "configFolder": "libs/pages/.storybook" }
           },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
+          "configurations": { "ci": { "quiet": true } }
         }
       }
     },
@@ -284,9 +134,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/react-hacker-news-app",
             "index": "apps/react-hacker-news-app/src/index.html",
@@ -297,9 +145,7 @@
               "apps/react-hacker-news-app/src/favicon.ico",
               "apps/react-hacker-news-app/src/assets"
             ],
-            "styles": [
-              "apps/react-hacker-news-app/src/styles.scss"
-            ],
+            "styles": ["apps/react-hacker-news-app/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -330,9 +176,7 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": {
-            "buildTarget": "react-hacker-news-app:build"
-          },
+          "options": { "buildTarget": "react-hacker-news-app:build" },
           "configurations": {
             "production": {
               "buildTarget": "react-hacker-news-app:build:production"
