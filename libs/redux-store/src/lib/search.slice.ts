@@ -29,7 +29,9 @@ export const searchSlice = createSlice({
       state,
       action: PayloadAction<SearchMessage['searchTerm']>
     ) => {
-      state.searchTerms.push(action.payload);
+      if (!state.searchTerms.includes(action.payload)) {
+        state.searchTerms.push(action.payload);
+      }
     },
   },
   extraReducers: (builder) => {
